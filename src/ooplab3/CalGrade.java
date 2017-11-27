@@ -14,14 +14,24 @@ public class CalGrade {
     public static void main(String[] args) throws IOException {
 //        BufferedReader
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter Your Score : ");
-        int score = Integer.parseInt(reader.readLine());
-
-        if (score<50) System.out.println("Your Grade : F");
-        else if (score<=59)System.out.println("Your Grade : D");
-        else if (score<=69)System.out.println("Your Grade : C");
-        else if (score<=79)System.out.println("Your Grade : B");
-        else System.out.println("Your Grade : A");
-
+        int count = 0;
+        int score = 0;
+        for (int i = 1; i <= 3; i++) {
+            System.out.print("Enter Your Score : ");
+            score = Integer.parseInt(reader.readLine());
+            if (score < 0 || score > 100) {
+                count++;
+                if (count == 3) {
+                    System.out.println("User Error");
+                    break;
+                }
+            } else {
+                if (score < 50) System.out.println("Your Grade : F");
+                else if (score <= 59) System.out.println("Your Grade : D");
+                else if (score <= 69) System.out.println("Your Grade : C");
+                else if (score <= 79) System.out.println("Your Grade : B");
+                else System.out.println("Your Grade : A");
+            }
+        }
     }
 }
