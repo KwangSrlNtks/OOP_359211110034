@@ -32,7 +32,6 @@ public class myArray {
             System.out.print(num[i]+" ");
         }
         System.out.println();
-
     }
 
 }//class
