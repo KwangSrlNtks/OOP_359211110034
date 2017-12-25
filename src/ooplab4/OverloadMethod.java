@@ -7,7 +7,7 @@ public class OverloadMethod {
 
     public static void a() {
         System.out.println("Hello");
-        int number = 10;
+        int number = 20;
         System.out.println(number);
         System.out.println(value);
     }
