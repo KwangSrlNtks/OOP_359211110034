@@ -20,4 +20,3 @@ public class Midterm31 {
     }//main
 
 }//class
-//SrlNtks

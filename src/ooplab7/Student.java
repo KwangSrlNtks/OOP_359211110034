@@ -7,7 +7,8 @@ package ooplab7;
 //4. group
 
 public class Student {
-    private String id;
+    public static String faculty = "Management Technology"; //public ตัวแปลนี้คลาสอื่นสามารถมองเห็นได้
+    private String id;  //private ตัวแปลนี้คลาสอื่นไม่สามารถมองเห็นได้
     private String name;
     private String major;
     private String group;
@@ -15,13 +16,13 @@ public class Student {
 
     //constructor
     //default
-    public Student(){}
+    public Student(){} //แบบต้องพิมพ์เอง
     public Student(String id,String n,String m,String g){
         this.id = id;
         this.name = n;
         this.major = m;
         this.group = g;
-    }// condtructor
+    }// condtructor //แบบไม่ต้องพิมพ์เอง
 
     //getter and srtter methods
     //id
