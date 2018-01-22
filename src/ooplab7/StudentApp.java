@@ -1,5 +1,7 @@
 package ooplab7;
 
+import java.util.Scanner;
+
 public class StudentApp {
 
     public static void main(String[] args) {
@@ -15,7 +17,28 @@ public class StudentApp {
                 "Gril Saiyai",
                 "Maketing",
                 "MK221"); //สร้างแบบไม่พิมพ์
-        showData(s1); //โชว์เฉพาะ s1
+        showData(s1); //โชว์แบบที่มีในโปรแกรมแล้ว s1
+        showData(s2); //โชว์แบบที่มีในโปรแกรมแล้ว s2
+
+        Student s3 = new Student();
+        s3 = inputData(s3);
+        showData(s3); //โชว์แบบพิมพ์ไปก่อนแล้วโชว์ข้อความ s3
+
+    }
+
+    private static Student inputData(Student s) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter student info : ");
+        System.out.print("Enter Student ID : ");
+        s.setId(scanner.nextLine());
+        System.out.print("Enter Student Name : ");
+        s.setname(scanner.nextLine());
+        System.out.print("Enter Student Major : ");
+        s.setmajor(scanner.nextLine());
+        System.out.print("Enter Student Group : ");
+        s.setgroup(scanner.nextLine());
+
+        return s;   //รับค่าจากผู้ใช้ s3
     }
 
     private static void showData(Student s) {
