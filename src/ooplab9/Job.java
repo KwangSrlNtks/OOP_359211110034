@@ -33,7 +33,7 @@ public class Job {
             return Salary;
         }
 
-        public void setPrivince(String Salary) {
+        public void setSalary(String Salary) {
             this.Salary = Salary;
         }
 
